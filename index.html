@@ -1,14 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idly Express</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idly Express</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Tamil&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Tiro Tamil', serif;
+      background-color: #fffaf0;
+      color: #4b2e2e;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #f08080;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .section {
+      padding: 2rem;
+    }
+    #hero img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+    form input, form textarea, form button {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      margin: 0.5rem;
+      border-radius: 10px;
+    }
+    .menu-item {
+      margin-bottom: 1rem;
+    }
+    .btn-contact {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <h1> Praveen </h1>
-    <h1> manickam</h1>
-    <img width="200px" src="Idli-1.webp" alt="Idly">
+  <header>
+    <h1>Idly Express</h1>
+    <p>Authentic Taste of South India</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#map">Location</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
 
+  <section id="home" class="section">
+    <h2>Welcome to Idly Express</h2>
+    <img src="sandhagai.webp" alt="Idly Showcase" id="mainImage">
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Started on 22 May 2011, Idly Express serves authentic South Indian idlies, sandhagai, and idiyappam. We specialize in simple flavors without sambar. Our food is made with love and tradition.</p>
+  </section>
+
+  <section id="menu" class="section">
+    <h2>Menu</h2>
+    <div class="menu-item">
+      <h4>Idly</h4>
+    </div>
+    <div class="menu-item">
+      <h4>Sandhagai </h4>
+    </div>
+    <div class="menu-item">
+      <h4>Idiyappam </h4>
+    </div>
+    <div class="menu-item">
+        <h4>Heart Idly</h4>
+    </div>
+        <div class="menu-item">
+        <h4>Flower Idly</h4>
+        </div>
+  </section>
+
+  <section id="gallery" class="section gallery">
+    <h2>Gallery</h2>
+    <img src="Idli-1.webp" alt="Idly" />
+    <img src="Idiyappam1.jpeg" alt="Idiyappam" />
+    <img src="sandhagai.webp" alt="Sandhagai" />
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Your Phone" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div style="text-align: center;">
+      <a class="btn-contact" href="https://wa.me/919942010288" target="_blank">WhatsApp Us</a>
+      <a class="btn-contact" href="tel:9942010288">Call Us</a>
+    </div>
+  </section>
+
+  <section id="map" class="section">
+    <h2>Location</h2>
+    <iframe src="https://g.co/kgs/7Gx1SXZ" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section id="order" class="section">
+    <h2>Online Order</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="Item (e.g., 2 Idly)" required>
+      <input type="text" placeholder="Pickup Time (e.g., 9:00 AM)">
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Idly Express | All rights reserved</p>
+    <p>Open: 6:00 AM – 10:00 PM</p>
+  </footer>
+
+  <script>
+    // Simple image switcher
+    let images = "Idli_1.webp";
+    let index = 0;
+    setInterval(() => {
+      document.getElementById("mainImage").src = images[index];
+      index = (index + 1) % images.length;
+    }, 3000);
+  </script>
 </body>
 </html>
